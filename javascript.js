@@ -63,6 +63,10 @@ btnNumbers.forEach(button => {
         } else if (display.value === "0") {
             display.value = "";
             display.value += e.target.textContent;
+        } else if (e.target.textContent === "+/-") {
+            display.value = String(-1 * Number(display.value));
+        } else if (e.target.textContent === "%") {
+            display.value = String((Number(display.value) / 100));
         } else {
             display.value += e.target.textContent; // returns string
         }  
